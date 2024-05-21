@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    {% include 'head.html' %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+    <title>Chat - Financial Adviser</title>
+{% endblock %}
+
+{% block body %}
+    {% with flashes = get_flashed_messages() %}
+        {% if flashes %}
+            {% for flsh in flashes %}
+                {% if flsh == "remove-warning" %}
+                    <p>Minus amount too high!</p>
+                {% elif flsh == "do-not-own" %}
+                    <p>You do not own that stock</p>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <div class="container">
+        {% include 'header.html' %}
+
+        <div class="main">
+            <table id="table" class="table">
+                <tr>
+                    <td>
+                        <table class="table__content">
+                            <tr class="table__header">
+                                <!-- <img src="{{ url_for('static', filename='icons/logo.png')}}" class="table__header-logo"> -->
+                    
+                                <th class="table__header-conversation">
+                                    <p>Conversation</p>
+                                </th>
+
+                                <th class="table__header-date">
+                                    <p>Date</p>
+                                </th>
+                                <th class="table__header-actions">
+                                    <p>Actions</p>
+                                </th>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+        
+        
+                <tr>
+                    <td>
+                        <div class="scroller">
+                            <table class="table__content">
+                                {% for conversation in conversations %}
+                                    <tr class="table__conversations">
+                                        <td class="table__conversations-convo">
+                                            <p class="table__conversations-message">{{ conversation.question }}</p>
+                                            <p class="table__conversations-response">{{ conversation.response | safe }}</p>
+                                        </td>
+                    
+                                        <td class="table__conversations-date">
+                                            <p>
+                                                {{ conversation.date_created.date() }}
+                                            </p>
+                                        </td>
+                    
+                                        <td class="table__conversations-buttons">
+                                            <span class="delete">
+                                                <!-- <i class="fa-solid fa-trash"></i> -->
+                                                🗑️
+                                                <a href="/delete/{{ conversation.id }}">Delete</a>
+                                            </span>
+                
+                                            <span class="regenerate">
+                                                <!-- <i class="fa-solid fa-rotate-right"></i> -->
+                                                &#128260;
+                                                <a href="/regenerate/{{ conversation.id }}">Regenerate</a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    
+        <form id="message" action="/chat" method="POST">
+            <input type="text" name="sentence" id="sentence">
+
+            <button>
+                &#128221;
+                <p>Submit</p>
+                <!-- <i class="fa-solid fa-paper-plane fa-lg"></i> -->
+            </button>
+        </form>
+    </div>
+{% endblock %}

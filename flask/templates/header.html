@@ -1,0 +1,51 @@
+<header>
+    <nav>
+        <div class="left">
+            <a href='#'><img src="{{ url_for('static', filename='icons/logo-quatrexant.png')}}" class="logo"/>
+            </a>
+
+            <h1>F | I | N | N</h1>
+        </div>
+
+        <div class="right">
+            <ul class='nav-bar'>
+                <input type='checkbox' id='check' />
+    
+                <span class="menu">
+                    <li class="header-button">
+                        &#127968;
+                        <a href="{{ url_for('index') }}">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="header-button">
+                        &#128172;
+                        <a href="{{ url_for('chat') }}">
+                            Chat
+                        </a>
+                    </li>
+
+                    <li class="header-button">
+                        &#10067;
+                        <a href="{{ url_for('about') }}">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="header-button">
+                        &#128209;
+                        <a href="{{ url_for('instructions') }}">
+                            Instructions
+                        </a>
+                    </li>
+
+                    <label for="check" class="close-menu">
+                        <i class="fas fa-times"></i>
+                    </label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,17 @@
+{% block head %}
+    <title>Financial Adviser</title>
+{% endblock %}
+
+<p>This is remove</p>
+
+<form action="{{ url_for('removePortfolioFunc') }}" method="POST">
+    <label for="ticker">Ticker</label>
+    <input type="text" name="ticker" id="ticker">
+
+    <label for="amount">Amount</label>
+    <input type="number" name="amount" id="amount">
+
+    <input type="submit" value="Submit">
+</form>
+
+{% include 'chat.html' %}

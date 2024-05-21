@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/instructions.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+    <script src="https://kit.fontawesome.com/d81c93ab17.js" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block body %}
+    <header>
+    <nav>
+        <ul class='nav-bar'>
+            <li class='logo'><a href='#'><img src='image_2024-05-06_202712462-removebg-preview.png'/></a></li>
+            <input type='checkbox' id='check' />
+            <span class="menu">
+                <li><a href="{{ url_for('index') }}" class="header-button">Home</a></li>
+                <li><a href="{{ url_for('chat') }}" class="header-button">Chat</a></li>
+                <li><a href="{{ url_for('about') }}" class="header-button">About</a></li>
+                <li><a href="{{ url_for('instructions') }}" class="header-button">Instruction</a></li>
+                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+            </span>
+            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+        </ul>
+    </nav>
+    </header>
+
+    <div class="instruction">
+        <div class="container">
+            <div class="instruction_wrapper">
+                <div class="instruction_description">
+                    <div class="instruction_text">
+                        <p><span class="instruc_text">Instruction<br></span>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ipsam, sapiente commodi nulla adipisci sit natus quo assumenda eum fuga rerum doloremque modi nostrum ut molestias dolores officiis distinctio animi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis adipisci eaque temporibus autem, ipsum dolore exercitationem totam iste sunt ex laborum in nulla ab repudiandae consequatur voluptas maxime doloribus similique!
+                            <br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam voluptatibus minima explicabo praesentium quibusdam ad itaque earum, repellat optio distinctio eum provident aut quod neque. Quae ad molestiae aspernatur tenetur. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse vero facilis ipsum corrupti, magni fugit similique pariatur blanditiis aut sit deserunt alias repudiandae amet expedita, exercitationem cumque distinctio ullam quam!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,179 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main {
+    width: 100%;
+    height: 70%;
+    background-color: var(--bg);
+    border-radius: 33px;
+    padding: 2em;
+}
+
+.table {
+    width: 100%;
+}
+
+.table__content{
+    border-spacing: 0px;
+    width: 100%;
+}
+
+/* Convo header */
+.table__header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6em;
+    padding: .5em;
+    background-color: var(--bg);
+    border: 2px solid var(--fg);
+    border-radius: 33px;
+    color: var(--yellow);
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.table__header-conversation {
+    width: 69.5%;
+}
+
+.table__header-date {
+    border-left: none;
+    border-right: none;
+    width: 12.3%;
+}
+
+.table__header-actions {
+    width: 13%;
+}
+
+/* Convo */
+.scroller {
+    height: 35em;
+    overflow-y: scroll;
+}
+
+.table__conversations {
+    display: flex;
+    justify-content: space-between;
+}
+
+.table__conversations td{
+    padding: 1em 1em;
+}
+
+.table__conversations-convo {
+    width: 69.5%;
+}
+
+.table__conversations-message {
+    color: var(--blue);
+}
+
+.table__conversations-response {
+    color: var(--yellow);
+}
+
+.table__conversations-date {
+    width: 10%;
+}
+
+.table__conversations-date p {
+    /* font-size: .8rem; */
+    color: var(--purple);
+}
+
+.table__conversations-buttons {
+    width: 20%;
+}
+
+.table__conversations span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3em;
+}
+
+.table__conversations a {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 5px;
+    transition: 300ms;
+}
+
+.table__conversations a:hover {
+    text-decoration-style: solid;
+}
+
+.delete, .delete a {
+    color: var(--red);
+}
+
+.regenerate, .regenerate a {
+    color: var(--green);
+}
+
+/* Form */
+#message {
+    position: relative;
+    width: 100%;
+    height: 4%;
+    margin: 1em 0em;
+    display: flex;
+    background-color: var(--bg);
+    border-radius: 33px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 1em;
+    padding-right: 8em;
+    background-color: var(--bg);
+    color: var(--blue);
+    border: 2px solid var(--fg);
+    border-right: none;
+    border-radius: 33px;
+    caret-color: magenta;
+}
+
+input[type=text]:focus {
+    outline: none;
+}
+
+input[type=text]:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 0s 600000s, color 0s 600000s !important;
+}
+
+/* No longer working on Chrome...as intended by Google ¯\_(ツ)_/¯  */
+/* This workaround used to cause security issues */
+/* input[type=text]:-webkit-autofill::first-line {
+    font-family: "Lora", serif;
+} */
+
+
+button {
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3em;
+    height: 100%;
+    padding: 0 1em;
+    background-color: var(--fg);
+    border: none;
+    border-radius: 33px;
+    color: var(--bg);
+    cursor: pointer;
+    transition: 300ms;
+}
+
+button:hover {
+    background-color: darkmagenta;
+    color: yellow;
+}

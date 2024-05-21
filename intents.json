@@ -1,0 +1,164 @@
+{"intents": [
+    {"tag": "greeting",
+      "patterns": [
+        "Hi", 
+        "How are you", 
+        "Is anyone there?", 
+        "Hello", 
+        "Good day", 
+        "Whats up", 
+        "Hey", 
+        "greetings"
+      ],
+      "responses": [
+        "Hello!", 
+        "Good to see you again!", 
+        "Hi there, how can I help?"
+      ]
+    },
+    {"tag": "goodbye",
+      "patterns": [
+        "cya", 
+        "See you later", 
+        "Goodbye", 
+        "I am Leaving", 
+        "Have a Good day", 
+        "bye", 
+        "cao", 
+        "see ya"
+      ],
+      "responses": [
+        "Sad to see you go :(", 
+        "Talk to you later", 
+        "Goodbye!"
+      ]
+    },
+    {"tag": "add",
+      "patterns": [
+        "Add to my stocks",
+        "I want to add stocks",
+        "Can you add some stocks to my portfolio?",
+        "Please add to my portfolio",
+        "Add this to my portfolio",
+        "I want something added to my portfolio"
+      ],
+      "responses": [
+        "I have added this =>",
+        "I have added this to your portfolio =>",
+        "This has been added to your portfolio =>",
+        "Your portfolio now has this stock =>",
+        "This stock has been added =>",
+        "This stock has been added to your portfolio =>",
+        "This stock is now part of your portfolio =>"
+      ]
+    },
+    {"tag": "remove",
+      "patterns": [
+        "Remove from my stocks",
+        "I want to remove stocks",
+        "Can you remove stocks from my portfolio?",
+        "Please remove from my portfolio",
+        "Remove this from my portfolio",
+        "I want something removed from my portfolio"
+      ],
+      "responses": [
+        "I have removed this =>",
+        "I have removed this from your portfolio =>",
+        "This has been removed from your portfolio =>",
+        "Your portfolio no longer has this stock =>",
+        "This stock has been removed =>",
+        "This stock has been removed from your portfolio =>",
+        "This stock is no longer part of your portfolio =>"
+      ]
+    },
+    {"tag": "resource",
+      "patterns": [
+        "Where can I learn financial literacy?", 
+        "Best way to learn manage finance", 
+        "How can I learn financial management", 
+        "Good financial literary resources", 
+        "Can you recommend financial literacy resources?"
+      ],
+      "responses": [
+        "Check out the Financial Literacy Resource Directory.", 
+        "Developed by the U.S. Office of the Comptroller of the Currency, this directory provides consumers with a great opportunity to explore a large selection of financial literacy resources."
+      ]
+    },
+    {"tag": "show",
+      "patterns": [
+        "What stocks do I have?", 
+        "Which stocks do I own?", 
+        "Show my stock portfolio"
+      ],
+      "responses": [
+        "Here are your stocks! =>",
+        "Your stocks are =>",
+        "You own these stocks =>",
+        "Sure, I can show your stock portfolio =>",
+        "Here is your stock portfolio =>",
+        "These are the stocks that you own =>",
+        "These stocks are yours =>",
+        "These are the stocks that you posses =>"
+      ]
+    },
+    {"tag": "worth",
+      "patterns": [
+        "How much is my portfolio?", 
+        "My portfolio is worth?",
+        "Show my portfolio worth",
+        "How big is my portfolio?"
+        ],
+      "responses": [
+        "Your portfolio is worth => ",
+        "You have in total => ",
+        "In total you have => ",
+        "In total your portfolio is => ",
+        "In total your portfolio is worth => ",
+        "Here is your portfolio worth => ",
+        "Here is how much your portfolio is worth => "
+        ]
+    },
+    {"tag": "gains",
+      "patterns": [
+        "How much are my gains?",
+        "How much have I gained?",
+        "How much are my profits?",
+        "I have earned how much?",
+        "Have I earned?",
+        "How much are my earnings?",
+        "Show me my profits",
+        "Show me my gains"
+      ],
+      "responses": [
+        "You earned =>",
+        "You've earned =>",
+        "You have earned =>",
+        "You gained =>",
+        "You've gained =>",
+        "You have gained =>",
+        "You're earnings are worth =>",
+        "You're earnings are =>",
+        "Here is how much you have profitted =>",
+        "Here are your profits =>",
+        "Here's your profits =>",
+        "You have profitted this much =>"
+      ]
+    },
+    {"tag": "plot",
+      "patterns": [
+        "Plot a stock's chart for me.",
+        "Can you plot a stock?",
+        "Can you plot stocks?",
+        "Can you please plot?",
+        "I'd like to plot a chart",
+        "I'd like to see a chart"
+      ],
+      "responses": [
+        "Here is your plot =>",
+        "Here is your stock's plot =>",
+        "This is the plot you asked =>",
+        "This is the stock's plot =>"
+      ]
+    }
+  ]
+  }

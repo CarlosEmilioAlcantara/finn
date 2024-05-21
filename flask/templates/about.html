@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+
+  <script src="https://kit.fontawesome.com/d81c93ab17.js" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block body %}
+    <header>
+        <nav>
+            <ul class='nav-bar'>
+                <li class='logo'><a href='#'><img src='image_2024-05-06_202712462-removebg-preview.png'/></a></li>
+                <input type='checkbox' id='check' />
+                <span class="menu">
+                    <li><a href="{{ url_for('index') }}" class="header-button">Home</a></li>
+                    <li><a href="{{ url_for('chat') }}" class="header-button">Chat</a></li>
+                    <li><a href="{{ url_for('about') }}" class="header-button">About</a></li>
+                    <li><a href="{{ url_for('instructions') }}" class="header-button">Instruction</a></li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+        </header>
+
+    <div class="about">
+        <div class="container">
+            <div class="about_wrapper">
+                <div class="about_top">
+                    <div class="top_logo">
+                        <img src="image_2024-05-06_202712462-removebg-preview.png" alt="" srcset="">
+                    </div>
+                    <div class="top_text">
+                        <p>About <span class="about_gray">Finn</span><br>
+                        <span class="about_finn"><span class="about_gray">Fi</span>nancial<br>
+                        <span class="about_gray">n</span>eural<br>
+                        <span class="about_gray">n</span>etwork</span></p>
+                    </div>
+                </div>
+                <div class="about_description">
+                    <div class="about_text">
+                        <p>&nbsp;&nbsp;&nbsp;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, commodi dolores dolore nemo ad magni quis nihil architecto nesciunt voluptatum ab labore officiis sunt? Repellat enim dolorum molestiae odio? Delectus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia fuga amet dignissimos doloremque quam iusto maiores adipisci quod modi libero nesciunt perferendis rerum, tempora optio culpa nemo sint ab voluptatibus!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

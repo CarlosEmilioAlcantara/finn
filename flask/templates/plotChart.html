@@ -1,0 +1,19 @@
+{% block head %}
+    <title>Financial Adviser</title>
+{% endblock %}
+
+{% block body %}
+<img src="{{ imgName }}" alt="Stock chart">    
+
+<form action="{{ url_for('plotChartFunc') }}" method="POST">
+    <label for="ticker">Ticker</label>
+    <input type="text" name="ticker" id="ticker">
+
+    <label for="amount">Start Date</label>
+    <input type="date" name="start-date" id="start-date">
+
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
+
+{% include 'chat.html' %}

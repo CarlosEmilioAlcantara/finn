@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    {% include 'head.html' %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <title>Home - Financial Adviser</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        {% include 'header.html' %}
+
+        <div class="cards">
+            <div class="card slider">
+                <div class="slider__images">
+                    <img class="slider__img" 
+                        src="{{ url_for('static', filename='imgs/aapl.png')}}"
+                        alt=""
+                    >
+
+                    <img class="slider__img" 
+                        src="{{ url_for('static', filename='imgs/btc-usd.png')}}"
+                        alt=""
+                    >
+
+                    <img class="slider__img" 
+                        src="{{ url_for('static', filename='imgs/tsla.png')}}"
+                        alt=""
+                    >
+
+                    <!-- <img class="slider__img" 
+                        src="{{ url_for('static', filename='yuka-tan.webp')}}"
+                        alt=""
+                    > -->
+                </div>
+
+                <h2>Financial Neural Network</h2>
+
+                <p>
+                    FINN is a sophisticated stock management AI assistant 
+                    designed to help you navigate your personal finances with 
+                    ease and confidence. Powered by advanced artificial intelligence and  machine learning algorithms, FINN offers
+                    financial advice, real-time stock market insights, and 
+                    comprehensive stock management tools, making it your 
+                    indispensable companion for achieving financial wellness.
+                </p>
+                
+                <h3>Features:</h3>
+                <div class="features-list">
+                    <ul>
+                        <li>Offer real-time stock market updates</li>
+
+                        <li>
+                            Provide portfolio management tools to monitor and 
+                            adjust your investments
+                        </li>
+
+                        <li>
+                            Access educational resources to enhance your 
+                            understanding of various investment strategies
+                        </li>
+
+                        <li>
+                            Provide actionable advice on how to achieve 
+                            short-term and long-term financial objectives
+                        </li>
+
+                        <li>
+                            Offer tips for reducing unnecessary expenses and
+                            maximizing savings
+                        </li>
+
+                        <li>
+                            Track your portfolio's worth to motivate you to stay on course
+                        </li>
+
+                        <li>
+                            Provide reports on your earnings
+                        </li>
+
+                        <li>
+                            Interact through a conversational interface that is 
+                            intuitive and easy to use
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <p>Test</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/slider.js')}}"></script>
+{% endblock %}
