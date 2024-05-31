@@ -6,7 +6,9 @@ from main import bag_of_words, tokenize
 
 # Getting data from flask
 import sys
-sys.path.append(r'D:\agqxyz\Documents\School\ITEP203-1 AnalysisAndDesignOfAlgo\Python\financial-adviser\flask')
+import os
+currentDir = os.path.dirname(__file__)
+sys.path.append(os.path.join(currentDir, r'..\flask'))
 
 import app
 
@@ -14,10 +16,10 @@ import app
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # Loading the json file as an associative array
-with open(r'D:\agqxyz\Documents\School\ITEP203-1 AnalysisAndDesignOfAlgo\Python\final-out\intents.json', 'r') as f:
+with open(os.path.join(currentDir, r'..\intents.json')) as f:
     intents = json.load(f)
 
-FILE = r"D:\agqxyz\Documents\School\ITEP203-1 AnalysisAndDesignOfAlgo\Python\financial-adviser\ai\training-data\data.pth"
+FILE = os.path.join(currentDir, r'.\training-data\data.pth')
 data = torch.load(FILE)
 
 input_size = data["input_size"]
@@ -31,7 +33,7 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-bot_name = "Yukari Takeba"
+bot_name = "FINN"
 # print("I love you! Type 'stupei' to exit")
 
 # while True: 

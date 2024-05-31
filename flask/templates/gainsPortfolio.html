@@ -1,20 +1,81 @@
 {% block head %}
-    <title>Financial Adviser</title>
+    {% include 'head.html' %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+    <title>Gains - Financial Adviser</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icons/gains.png')}}">
 {% endblock %}
 
 {% block body %}
-    <p>Relative Gains: {{ relativeGains }}%</p>
-    <p>Absolute Gains: {{ gainsAbsolute }} USD</p>
+    {% include 'popups.html' %}
 
-    <form action="{{ url_for('gainsPortfolioFunc') }}" method="POST">
-        <label for="ticker">Ticker</label>
-        <input type="text" name="ticker" id="ticker">
+    <div class="container center">
+        {% include 'header.html' %}
 
-        <label for="amount">Start Date</label>
-        <input type="date" name="start-date" id="start-date">
+        <div class="form-box shadow">
+            <div class="form-box__header">
+                <h2>Track Your Gains</h2>
 
-        <input type="submit" value="Submit">
-    </form>
+                <img 
+                    src="{{ url_for('static', filename='placeholder/gains.avif')}}" 
+                    alt=""
+                >
+
+                <p>
+                    Here you can check how much you've earned per share that 
+                    is in your portfolio.
+                </p>
+
+                <div class="form-box__header__steps">
+                    <h3>Steps:</h3>
+
+                    <ol>
+                        <li>
+                            Choose the stock's ticker symbol in the ticker 
+                            dropdown menu
+                        </li>
+
+                        <li>
+                            Then choose the starting date that you want to  
+                            start tracking from
+                        </li>
+
+                        <li>
+                            Finally. Click the "Start Tracking" button to track 
+                            the shares
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <form action="{{ url_for('gainsPortfolioFunc') }}" method="POST">
+                <div class="form-box__inputs">
+                    <div>
+                        <label for="ticker">Ticker</label>
+                        <label class="select-ticker">
+                            <select name="ticker" id="ticker">
+                                {% for key in keys %}
+                                    <option value="{{ key }}">{{ key }}</option>
+                                {% endfor %}
+                            </select>
+                        </label>
+                    
+                        <label for="amount">Start Date</label>
+                        <input type="date" name="start-date" id="start-date">
+                    </div>
+
+                    <div>
+                        <!-- <input type="submit" value="Add Shares">
+                         -->
+                         <button>
+                            &#128221;
+                            <p>Start Tracking</p>
+                            <!-- <i class="fa-solid fa-paper-plane fa-lg"></i> -->
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/popups.js')}}"></script>
 {% endblock %}
-
-{% include 'chat.html' %}

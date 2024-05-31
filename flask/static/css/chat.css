@@ -117,6 +117,12 @@ body {
     color: var(--green);
 }
 
+.table__conversations img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 11px;
+}
+
 /* Form */
 #message {
     position: relative;

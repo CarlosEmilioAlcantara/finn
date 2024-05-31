@@ -44,7 +44,7 @@ h2 {
     margin: 1em 0 2em 0;
 }
 
-.add-box__inputs {
+.form-box__inputs {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,7 +52,7 @@ h2 {
     /* width: 100%; */
 }
 
-.add-box__inputs:first-child div {
+.form-box__inputs:first-child div {
     display: flex;
     flex-direction: column;
     gap: .1em;
@@ -74,13 +74,40 @@ input {
     caret-color: magenta;
 }
 
-input:focus {
+input:focus, select:focus {
     outline: none;
 }
 
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
     transition: background-color 0s 600000s, color 0s 600000s !important;
+}
+
+select {
+    width: 100%;
+    padding: .5em;
+    border: none;
+    border-radius: 33px;
+    background-color: var(--blue);
+    color: white;
+    appearance: none;
+    cursor: pointer;
+}
+
+.select-ticker {
+    position: relative;
+    border: none;
+    border-radius: 33px;
+    background-color: var(--blue);
+    color: white;
+}
+
+.select-ticker:after {
+    position: absolute;
+    content: "<>";
+    transform: rotate(90deg);
+    top: .4em;
+    right: .5em;
 }
 
 button {

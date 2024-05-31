@@ -1,0 +1,114 @@
+.overlay {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--less-transparent); 
+    z-index: 2;
+}
+
+.popup {
+    position: absolute;
+    top: 20%;
+    right: 35%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    width: 30vw;
+    height: fit-content;
+    padding: 3em;
+    background-color: var(--bg);
+    border-radius: 33px;
+    color: var(--yellow);
+    animation: popup 0.7s;
+    z-index: 3;
+}
+
+.popup .instructions {
+    /* position: relative; */
+    overflow: hidden;
+}
+
+.popup .right {
+    /* position: absolute;
+    bottom: 0; */
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+
+.popup p {
+    font-size: 0.9rem;
+}
+
+.popup button:hover {
+    background-color: darkmagenta;
+    color: yellow;
+}
+
+.dropdown-container {
+    height: 25em;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.dropdown {
+    width: 100%;
+}
+
+.dropdown span {
+    transform: rotate(90deg);
+}
+
+.dropdown__header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--yellow);
+    cursor: pointer;
+}
+
+.dropdown__content {
+    max-height: 0px;
+    margin: 0.4em;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    transition: max-height 500ms;
+}
+
+.dropdown__content img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 11px;
+}
+
+.open {
+    display: flex;
+}
+
+.pulldown {
+    max-height: 100%;
+}
+
+.chatbox-img {
+    height: 3em;
+    object-fit: fill !important;
+}
+
+.actions-img {
+    width: 30% !important;
+}
+
+.scrolling-dropdown {
+    height: 15em;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

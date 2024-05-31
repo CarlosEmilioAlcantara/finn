@@ -13,7 +13,8 @@ nav {
 .left {
     width: 20%;
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
+    justify-content: center;
     align-items: center;
     background-color: var(--bg);
     border-radius: 33px;

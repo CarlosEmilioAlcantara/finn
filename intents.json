@@ -159,6 +159,389 @@
         "This is the plot you asked =>",
         "This is the stock's plot =>"
       ]
-    }
+    }, 
+    {"tag": "advice",
+      "patterns": [
+        "How do I make more money using investing"
+      ],
+      "responses": [
+        "Get a job!"
+      ]
+    },
+    {"tag": "budgeting",
+      "patterns": [
+        "What is a budget?",
+        "What's a budget?",
+        "Whats a budget?",
+        "What does budget mean?"
+      ],
+    "responses": [
+        "A budget is a financial plan that estimates your income and expenses over a specific period. It helps you manage your money, save for goals, and avoid overspending."
+    ]
+  },
+  {"tag": "savings",
+    "patterns": [
+      "How can I save more money?",
+      "Is there a way to save more money?",
+      "How do I save more money?"
+    ],
+  "responses": [
+      "To save more money, try creating a budget, cutting unnecessary expenses, setting savings goals, and automating your savings. Start small and gradually increase your savings rate."
+  ]
+  },
+  {"tag": "emergency fund",
+    "patterns": [
+      "What is an emergency fund?",
+      "What's emergency fund?",
+      "What does emergency fund mean?"
+    ],
+  "responses": [
+    "An emergency fund is a stash of money set aside to cover unexpected expenses, like medical bills or car repairs. Aim to save 3-6 months' worth of living expenses."
+  ]
+  },
+  {"tag": "investment types",
+  "patterns": [
+    "What are the different types of investments?",
+    "What are the types of investment?",
+    "Types of investment",
+    "Different types of investment"
+  ],
+  "responses": [
+    "Common types of investments include stocks, bonds, mutual funds, ETFs, real estate, and commodities. Each type has different risk levels and potential returns."
+  ]
+  },
+  {"tag": "credit score",
+  "patterns": [
+    "What is a credit score?",
+    "What's a credit score?",
+    "What does credit score mean?"
+  ],
+  "responses": [
+    "A credit score is a numerical representation of your creditworthiness, based on your credit history. It affects your ability to get loans and the interest rates you pay."
+  ]
+  },
+  {"tag": "improve credit score",
+  "patterns": [
+    "How can I improve my credit score?",
+    "Is there a way to improve my credit score?",
+    "How do I improve my credit score?"
+  ],
+  "responses": [
+    "To improve your credit score, pay your bills on time, reduce your debt, avoid opening too many new credit accounts at once, and regularly check your credit report for errors."
+  ]
+  },
+  {"tag": "compound interest",
+  "patterns": [
+    "What is compound interest?",
+    "What's a compound interest?",
+    "What does compound interest mean?"
+  ],
+  "responses": [
+    "Compound interest is the interest on a loan or deposit calculated based on both the initial principal and the accumulated interest from previous periods. It's a powerful way to grow your savings."
+  ]
+  },
+  {"tag": "rent vs buy",
+  "patterns": [
+    "Should I rent or buy a house?",
+    "Should I buy or rent a house?",
+    "Which one is better, rent a house or buy a house?",
+    "Is renting a house better then buying a house?",
+    "Which one is better, buy a house or rent a house?",
+    "Is buying a house better then renting a house?"
+  ],
+  "responses": [
+    "Deciding whether to rent or buy depends on your financial situation, lifestyle, and long-term goals. Buying can build equity, but renting offers flexibility and fewer responsibilities."
+  ]
+  },
+  {"tag": "retirement planning",
+  "patterns": [
+    "How do I plan for retirement?",
+    "How can I plan for retirement?"
+  ],
+  "responses": [
+    "To plan for retirement, start by determining your retirement goals and estimating how much you'll need. Contribute regularly to retirement accounts like a 401(k) or IRA, and diversify your investments."
+  ]
+  },
+  {"tag": "debt repayment",
+  "patterns": [
+    "What are the best ways to pay off debt?",
+    "What is a best ways to pay off debt?",
+    "What are the best ways to pay off the debt?",
+    "What is a best ways to pay off the debt?",
+    "What are the ways to pay of the debt?"
+  ],
+  "responses": [
+    "Effective debt repayment strategies include the avalanche method (paying off highest interest debt first) and the snowball method (paying off smallest debt first). Consistently make payments above the minimum when possible."
+  ]
+  },
+  {"tag": "401k",
+  "patterns": [
+    "What is a 401(k)?",
+    "What's 401(k)?"
+  ],
+  "responses": [
+    "A 401(k) is a retirement savings plan offered by employers. It allows employees to save and invest a portion of their paycheck before taxes are taken out. Employers may also match contributions."
+  ]
+  },
+  {"tag": "identity theft",
+  "patterns": [
+    "How can I protect myself from identity theft?",
+    "Is there a way to protect myself from identity theft?",
+    "How can one protect itself from identity theft?"
+  ],
+  "responses": [
+    "Protect yourself from identity theft by using strong passwords, monitoring your credit reports, avoiding sharing personal information online, and using secure networks."
+  ]
+  },
+  {"tag": "checking vs savings",
+  "patterns": [
+    "What is the difference between a checking and savings account?",
+    "What are the difference between a checking and saving account?",
+    "Is there any difference between a checking and saving account?",
+    "What is the difference between a saving and checking account?",
+    "What is the difference between checking and savings account?",
+    "What is the difference between saving and checking account?",
+    "What are the difference between a saving and checking account?",
+    "What are the difference between checking and saving account?",
+    "What are the difference between saving and checking account?",
+    "Is there any difference between a saving and checking account?",
+    "Is there any difference between checking and saving account?",
+    "Is there any difference between saving and checking account?"
+  ],
+  "responses": [
+    "A checking account is used for daily transactions and typically offers easy access to your money through checks, debit cards, and ATMs. A savings account is designed to hold money you don't plan to spend immediately and usually earns interest."
+  ]
+  },
+  {"tag": "mutual fund",
+  "patterns": [
+    "What is a mutual fund?",
+    "What's mutual fund?",
+    "What does mutual fund mean?"
+  ],
+  "responses": [
+    "A mutual fund is an investment vehicle that pools money from many investors to purchase a diversified portfolio of stocks, bonds, or other securities. It is managed by professional fund managers."
+  ]
+  },
+  {"tag": "mortgage",
+  "patterns": [
+    "What is a mortgage?",
+    "What does mortgage mean?",
+    "What's mortgage?"
+  ],
+  "responses": [
+    "A mortgage is a loan used to purchase real estate. It's typically repaid over a long period, often 15 to 30 years, and the property serves as collateral for the loan."
+  ]
+  },
+  {"tag": "net worth",
+  "patterns": [
+    "How do I calculate my net worth?",
+    "How can I calculate my net worth?"
+  ],
+  "responses": [
+    "To calculate your net worth, add up all your assets (such as cash, investments, and property) and subtract your liabilities (such as debts and loans). Your net worth is a measure of your overall financial health."
+  ]
+  },
+  {"tag": "student loans",
+  "patterns": [
+    "How can I reduce my student loan payments?",
+    "How do I reduce my student loan payments?"
+  ],
+  "responses": [
+    "To reduce student loan payments, consider refinancing to lower interest rates, enrolling in an income-driven repayment plan, or exploring loan forgiveness programs if you qualify."
+  ]
+  },
+  {"tag": "balance transfer",
+  "patterns": [
+    "What is a credit card balance transfer?",
+    "What's a credit card balance transfer?",
+    "What does credit card balance transfer mean?"
+  ],
+  "responses": [
+    "A credit card balance transfer involves moving high-interest credit card debt to a new card with a lower interest rate. It can help save money on interest charges and pay off debt faster."
+  ]
+  },
+  {"tag": "traditional IRA, Roth IRA",
+  "patterns": [
+    "What is the difference between a traditional IRA and a Roth IRA?",
+    "What's the difference between a traditional IRA and a Roth IRA?",
+    "Is there a difference between a traditional IRA and a Roth IRA?"
+  ],
+  "responses": [
+    "A traditional IRA allows you to contribute pre-tax income, and withdrawals in retirement are taxed as ordinary income. A Roth IRA, on the other hand, uses after-tax contributions, and qualified withdrawals in retirement are tax-free."
+  ]
+  },
+  {"tag": "home equity loan",
+  "patterns": [
+    "What is a home equity loan?",
+    "What's home equity loan?",
+    "What does home equity loan mean?"
+  ],
+  "responses": [
+    "A home equity loan is a type of loan that allows homeowners to borrow against the equity in their home. It's typically used for large expenses like home renovations or debt consolidation."
+  ]
+  },
+  {"tag": "will",
+  "patterns": [
+    "How do I create a will?",
+    "How can I create a will?"
+  ],
+  "responses": [
+    "To create a will, list your assets and beneficiaries, choose an executor to carry out your wishes, and specify how you want your assets distributed after your death. It's important to consult a legal professional to ensure your will is valid and meets your needs."
+  ]
+  },
+  {"tag": "401(k), IRA",
+  "patterns": [
+    "What is the difference between a 401(k) and an IRA?",
+    "What's the difference between a 401(k) and an IRA?",
+    "Is there a difference between a 401(k) and an IRA"
+  ],
+  "responses": [
+    "A 401(k) is an employer-sponsored retirement plan, while an IRA (Individual Retirement Account) is opened by an individual. Both offer tax advantages for retirement savings, but contribution limits and investment options differ."
+  ]
+  },
+  {"tag": "real estate investing",
+  "patterns": [
+    "How do I start investing in real estate?",
+    "How can I start investing in real estate?"
+  ],
+  "responses": [
+    "To start investing in real estate, research different investment options (such as rental properties, real estate investment trusts, or crowdfunding platforms), consider your financial goals and risk tolerance, and conduct due diligence on potential properties or investments."
+  ]
+  },
+  {"tag": "savings account",
+  "patterns": [
+    "What is the difference between a traditional and a high-yield savings account?",
+    "What's the difference between a traditional and a high-yield saving account?",
+    "Is there any difference between a tradional and a high-yield saving account?"
+  ],
+  "responses": [
+    "A traditional savings account typically offers lower interest rates and may have minimum balance requirements, while a high-yield savings account offers higher interest rates and may have fewer fees. High-yield accounts are often online-only and may require higher initial deposits."
+  ]
+  },
+  {"tag": "dollar-cost averaging",
+  "patterns": [
+    "What is dollar-cost averaging?",
+    "What's dollar-cost averaging?",
+    "What does dollar-cost averaging mean?"
+  ],
+  "responses": [
+    "Dollar-cost averaging is an investment strategy where you invest a fixed amount of money at regular intervals, regardless of market conditions. It helps reduce the impact of market volatility over time and can be an effective way to build wealth."
+  ]
+  },
+  {"tag": "homebuying",
+  "patterns": [
+    "How do I know if I'm ready to buy a house?",
+    "How would I know if i'm ready to buy a house?",
+    "How do I know if Im ready to buy a house?",
+    "How would I know if im ready to buy a house?",
+    "How do I know if I'm ready to buy a new house?",
+    "How do I know if Im ready to buy a new house?",
+    "How would I know if i'm ready to buy a new house?",
+    "How would I know if im ready to buy a new house?"
+  ],
+  "responses": [
+    "To determine if you're ready to buy a house, consider factors like your financial stability, credit score, debt-to-income ratio, down payment savings, and long-term housing plans. It's also important to factor in additional costs like closing costs, property taxes, and maintenance expenses."
+  ]
+  },
+  {"tag": "traditional 401(k), Roth 401(k)",
+  "patterns": [
+    "What is the difference between a traditional and a Roth 401(k)?",
+    "What's the difference between a traditional and a roth 401(k)?",
+    "Is there any difference between a traditional and a roth 401(k)?"
+  ],
+  "responses": [
+    "A traditional 401(k) allows you to contribute pre-tax income, reducing your taxable income for the year, while a Roth 401(k) uses after-tax contributions, allowing for tax-free withdrawals in retirement. The choice between the two depends on your current tax situation and future tax expectations."
+  ]
+  },
+  {"tag": "HSA",
+  "patterns": [
+    "What is a health savings account (HSA)?",
+    "What's health saving account (HSA)?",
+    "What does health saving account mean (HSA)?",
+    "What is a health savings account?",
+    "What's health saving account?",
+    "What does health saving account mean?"
+  ],
+  "responses": [
+    "A health savings account (HSA) is a tax-advantaged account that allows individuals to save for qualified medical expenses. Contributions are tax-deductible, earnings grow tax-free, and withdrawals for qualified medical expenses are tax-free. HSAs are typically paired with high-deductible health plans (HDHPs)."
+  ]
+  },
+  {"tag": "retirement income",
+  "patterns": [
+    "How do I create a retirement income plan?",
+    "How should I create a retirement income plan?",
+    "How can I create a retirement income plan?"
+  ],
+  "responses": [
+    "To create a retirement income plan, estimate your retirement expenses, assess potential income sources (such as Social Security, pensions, retirement accounts, and other investments), and develop a strategy to generate a reliable income"
+  ]
+  },
+  {"tag": "Filipino investment",
+  "patterns": [
+    "What are the best investment options for filipinos?",
+    "What's the best investment option for filipinos?",
+    "What do you think is the best investment for the filipinos?",
+    "Is there a best investment option for filipinos?",
+    "Is there any best investment option for filipino?"
+  ],
+  "responses": [
+    "For Filipinos, some popular investment options include investing in stocks through the Philippine Stock Exchange (PSE), mutual funds, unit investment trust funds (UITFs), real estate properties, and government savings programs like Pag-IBIG Fund and SSS Flexi Fund. Each option has its own risks and potential returns, so it's important to do thorough research and consider your investment goals and risk tolerance before investing."
+  ]
+  },
+  {"tag": "bank account opening",
+  "patterns": [
+    "What are the steps to open a bank account in the Philippines?",
+    "What's the steps to open a bank account in the Philippines?",
+    "What steps are there to open a bank account in the Philippines?"
+  ],
+  "responses": [
+    "To open a bank account in the Philippines, you typically need to visit a branch of your chosen bank with valid identification documents such as a government-issued ID (e.g., passport, driver's license), proof of address, and an initial deposit. The specific requirements may vary depending on the bank and the type of account you wish to open."
+  ]
+  },
+  {"tag": "personal loan application",
+  "patterns": [
+    "How can I apply for a personal loan in the Philippines?",
+    "How do I apply for a personal loan in the Philippines?"
+  ],
+  "responses": [
+    "To apply for a personal loan in the Philippines, you can visit the nearest branch of a bank or apply online through the bank's website or mobile app. You'll need to submit documents such as proof of income, valid identification, and other supporting documents as required by the lender. The loan application process typically involves credit evaluation and approval based on your creditworthiness and ability to repay the loan."
+  ]
+  },
+  {"tag": "credit card application",
+  "patterns": [
+    "What is the process of applying for a credit card in the Philippines?",
+    "What are the process of applying for a credit card in the Philippines?"
+  ],
+  "responses": [
+    "To apply for a credit card in the Philippines, you can visit the website of a credit card issuer or apply in person at their branch. You'll need to fill out an application form and submit documents such as proof of identity, proof of income, and other required documents. The credit card issuer will then evaluate your application based on factors such as your credit history, income, and other financial information."
+  ]
+  },
+  {"tag": "Philippine stock market",
+  "patterns": [
+    "How can I invest in the Philippine stock market?",
+    "How should I invest in the Philippine stock market?"
+  ],
+  "responses": [
+    "To invest in the Philippine stock market, you can open an account with a licensed stockbroker or brokerage firm. You'll need to submit required documents such as a valid ID, proof of address, and a filled-out account opening form. Once your account is approved, you can start buying and selling stocks through the Philippine Stock Exchange (PSE) using your broker's trading platform or mobile app."
+  ]
+  },
+  {"tag": "Philippine investment taxes",
+  "patterns": [
+    "What are the tax implications of investing in the Philippines?",
+    "What's the taxt implications of investing in the Philippines?"
+  ],
+  "responses": [
+    "Investors in the Philippines may be subject to various taxes depending on the type of investment and their individual circumstances. For example, capital gains tax may apply to profits from the sale of stocks or real estate properties, while dividends from stocks are subject to withholding tax. It's important to consult with a tax advisor or accountant to understand your tax obligations and optimize your investment strategy."
+  ]
+  },
+  {"tag": "retirement savings",
+  "patterns": [
+    "How can I start saving for retirement in the Philippines?",
+    "How do I start saving for retirement in the Philippines?"
+  ],
+  "responses": [
+    "To start saving for retirement in the Philippines, you can consider contributing to retirement savings vehicles such as the Social Security System (SSS), the Government Service Insurance System (GSIS) for government employees, or a private pension plan. You can also invest in voluntary retirement savings programs like the Personal Equity and Retirement Account (PERA) or set up your own retirement fund through regular savings and investments in stocks, bonds, mutual funds, or real estate."
+  ]
+  }
   ]
   }

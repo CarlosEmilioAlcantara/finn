@@ -5,7 +5,9 @@ from datetime import datetime
 
 # AI THINGS
 import sys
-sys.path.append(r'D:\agqxyz\Documents\School\ITEP203-1 AnalysisAndDesignOfAlgo\Python\financial-adviser\ai')
+import os
+currentDir = os.path.dirname(__file__)
+sys.path.append(os.path.join(currentDir, r'..\ai'))
 from chat import *
 
 # STRING FORMATTING THINGS
@@ -54,7 +56,7 @@ def addPortfolio(id, sentence, intent):
     session['sentence'] = sentence
     session['intent'] = intent
 
-    conversations = Conversation.query.order_by(Conversation.date_created).all()
+    conversations = Conversation.query.order_by(Conversation.date_created.desc()).all()
 
     if id < 0:
         return render_template(
@@ -103,7 +105,7 @@ def addPortfolioFunc():
             db.session.add(new_conversation)
             db.session.commit()
 
-            conversations = Conversation.query.order_by(Conversation.date_created).all()
+            conversations = Conversation.query.order_by(Conversation.date_created.desc()).all()
 
             return render_template('chat.html', conversations=conversations)
     else:
@@ -196,11 +198,13 @@ def removePortfolio(id, sentence, intent):
     session['sentence'] = sentence
     session['intent'] = intent
 
-    conversations = Conversation.query.order_by(Conversation.date_created).all()
-
+    conversations = Conversation.query.order_by(Conversation.date_created.desc()).all()
+    keys = portfolio.keys()
+    
     if id < 0:
         return render_template(
             'removePortfolio.html', 
+            keys = keys,
             conversations=conversations
         )
     else:
@@ -270,10 +274,20 @@ def removePortfolioFunc():
 
                     db.session.add(new_conversation)
                     db.session.commit()
+
+                    return redirect('/chat')
                 else:
-                    flash("remove-warning", "info")
+                    flash("too-much", "info")
+
+                    conversations = Conversation.query.order_by(Conversation.date_created.desc()).all()
+
+                    return render_template('/chat.html', conversations=conversations, amount=amount, tickCount=tickCount)
             else:
                 flash("do-not-own")
+
+                conversations = Conversation.query.order_by(Conversation.date_created.desc()).all()
+
+                return render_template('/chat.html', conversations=conversations, tick = tick)
     else:
         if id > 0:
             conversation = Conversation.query.get_or_404(id)
@@ -331,12 +345,22 @@ def removePortfolioFunc():
                         try:
                             conversation.response = answer
                             db.session.commit()
+
+                            return redirect('/chat')
                         except:
                             return 'Something went wrong'
                     else:
-                        flash("remove-warning", "info")
+                        flash("too-much", "info")
+
+                        conversations = Conversation.query.order_by(Conversation.date_created.desc()).all()
+
+                        return render_template('/chat.html', conversations=conversations, amount=amount, tickCount=tickCount)
                 else:
                     flash("do-not-own")  
+                    
+                    conversations = Conversation.query.order_by(Conversation.date_created.desc()).all()
+
+                    return render_template('/chat.html', conversations=conversations, tick = tick)
             else:
                 try:
                     tickRegex = re.split(r'\s+', re.search(r':.*now', response).group())
@@ -347,7 +371,6 @@ def removePortfolioFunc():
                 if tick in portfolio.keys():
                     answer = (f"{bot_name}: It appears that => " + tick +
                               " has been readded to the portfolio")
-                    
                 else:
                     answer = (f"{bot_name}: Stock => " + tick +
                               " has already been removed")
@@ -355,10 +378,10 @@ def removePortfolioFunc():
                 try:
                     conversation.response = answer
                     db.session.commit()
+
+                    return redirect('/chat')
                 except:
                     return 'Something went wrong'
-
-    return redirect('/chat')
 
 @app.route("/chat/showPortfolio")
 def showPortfolio(id, sentence, intent):
@@ -436,7 +459,7 @@ def worthPortfolio(id, sentence, intent):
         db.session.add(new_conversation)
         db.session.commit()
 
-        conversations = Conversation.query.order_by(Conversation.date_created).all()
+        conversations = Conversation.query.order_by(Conversation.date_created.desc()).all()
 
         return render_template('/chat.html', conversations=conversations)
     elif id > 0:
@@ -461,11 +484,13 @@ def gainsPortfolio(id, sentence, intent):
     session['sentence'] = sentence
     session['intent'] = intent
     
-    conversations = Conversation.query.order_by(Conversation.date_created).all()
+    conversations = Conversation.query.order_by(Conversation.date_created.desc()).all()
+    keys = portfolio.keys()
 
     if id < 0:
         return render_template(
             'gainsPortfolio.html', 
+            keys =  keys,
             conversations=conversations
         )
     else:
@@ -531,7 +556,7 @@ def gainsPortfolioFunc():
             db.session.add(new_conversation)
             db.session.commit()
 
-            conversations = Conversation.query.order_by(Conversation.date_created).all()
+            # conversations = Conversation.query.order_by(Conversation.date_created.desc()).all()
 
             return redirect('/chat')
     else:
@@ -592,11 +617,13 @@ def plotChart(id, sentence, intent):
     session['sentence'] = sentence
     session['intent'] = intent
     
-    conversations = Conversation.query.order_by(Conversation.date_created).all()
+    conversations = Conversation.query.order_by(Conversation.date_created.desc()).all()
+    keys = portfolio.keys()
 
     if id < 0:
         return render_template(
             'plotChart.html', 
+            keys = keys,
             conversations=conversations
         )
     else:
@@ -657,7 +684,7 @@ def plotChartFunc():
             db.session.add(new_conversation)
             db.session.commit()
 
-            conversations = Conversation.query.order_by(Conversation.date_created).all()
+            # conversations = Conversation.query.order_by(Conversation.date_created.desc()).all()
 
             return redirect('/chat')
     else:
@@ -715,11 +742,11 @@ def plotChartFunc():
             
     return redirect('/chat')
 
-def openResourceSite():
-    webbrowser.open('https://www.occ.gov/topics/consumers-and-communities/community-affairs/resource-directories/financial-literacy/index-financial-literacy-resource-directory.html')
+# def openResourceSite():
+#     webbrowser.open('https://www.occ.gov/topics/consumers-and-communities/community-affairs/resource-directories/financial-literacy/index-financial-literacy-resource-directory.html')
 
 method_mappings = {
-    "resource": openResourceSite,
+    # "resource": openResourceSite,
     "show": showPortfolio,
     "worth": worthPortfolio,
     "gains": gainsPortfolio,
@@ -752,7 +779,7 @@ def chat():
         if prob.item() > 0.75:
             for intent in intents["intents"]:
                 if tag == intent["tag"]:
-                    if tag == "greeting" or tag == "goodbye":
+                    if tag == "greeting" or tag == "goodbye" or tag == "advice":
                         answer = (f"{bot_name}: {random.choice(intent['responses'])}")
 
                         # Adding to our database and displaying
@@ -763,7 +790,7 @@ def chat():
                             db.session.add(new_conversation)
                             db.session.commit()
 
-                            conversations = Conversation.query.order_by(Conversation.date_created).all()
+                            conversations = Conversation.query.order_by(Conversation.date_created.desc().desc()).all()
                             
                             return render_template('chat.html', conversations=conversations)
                         except:
@@ -786,13 +813,13 @@ def chat():
                 db.session.add(new_conversation)
                 db.session.commit()
 
-                conversations = Conversation.query.order_by(Conversation.date_created).all()
+                conversations = Conversation.query.order_by(Conversation.date_created.desc()).all()
 
                 return render_template('chat.html', conversations=conversations)
             except:
                 return 'Something went wrong'
     else:
-        conversations = Conversation.query.order_by(Conversation.date_created).all()
+        conversations = Conversation.query.order_by(Conversation.date_created.desc()).all()
 
         return render_template('chat.html', conversations=conversations)
 
@@ -844,11 +871,8 @@ def regenerate(id):
     if prob.item() > 0.75:
         for intent in intents["intents"]:
             if tag == intent["tag"]:
-                if tag == "greeting" or tag == "goodbye":
-                    answer = (f"{bot_name}: \
-                              {random.choice( \
-                              intent['responses'] \
-                              )}")
+                if tag == "greeting" or tag == "goodbye" or tag == "advice":
+                    answer = (f"{bot_name}: {random.choice(intent['responses'] )}")
                     
                     try:
                         conversation.response = answer

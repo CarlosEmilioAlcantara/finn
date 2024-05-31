@@ -1,7 +1,12 @@
 <header>
     <nav>
-        <div class="left">
-            <a href='#'><img src="{{ url_for('static', filename='icons/logo-quatrexant.png')}}" class="logo"/>
+        <div class="left shadow">
+            <a href='#'>
+                <!-- <img 
+                    src="{{ url_for('static', filename='icons/logo-quatrexant.png')}}" 
+                    class="logo"
+                /> -->
+                <!-- 💵 -->
             </a>
 
             <h1>F | I | N | N</h1>
@@ -9,33 +14,33 @@
 
         <div class="right">
             <ul class='nav-bar'>
-                <input type='checkbox' id='check' />
+                <input type='checkbox' id='check'/>
     
                 <span class="menu">
-                    <li class="header-button">
+                    <li class="header-button shadow">
                         &#127968;
                         <a href="{{ url_for('index') }}">
                             Home
                         </a>
                     </li>
 
-                    <li class="header-button">
+                    <li class="header-button shadow">
                         &#128172;
                         <a href="{{ url_for('chat') }}">
                             Chat
                         </a>
                     </li>
 
-                    <li class="header-button">
+                    <li class="header-button shadow">
                         &#10067;
-                        <a href="{{ url_for('about') }}">
+                        <a class="about-button" href="#">
                             About
                         </a>
                     </li>
 
-                    <li class="header-button">
+                    <li class="header-button shadow">
                         &#128209;
-                        <a href="{{ url_for('instructions') }}">
+                        <a class="instructions-button" href="#">
                             Instructions
                         </a>
                     </li>

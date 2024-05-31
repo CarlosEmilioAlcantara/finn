@@ -1,0 +1,14 @@
+.popup-button {
+    position: static !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .6em;
+    padding: 1em 1.3em;
+    border: none;
+    border-radius: 33px;
+    background-color: var(--fg);
+    caret-color: magenta;
+    cursor: pointer;
+    transition: 300ms;
+}

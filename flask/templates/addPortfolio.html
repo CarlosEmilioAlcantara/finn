@@ -2,13 +2,16 @@
     {% include 'head.html' %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
     <title>Add - Financial Adviser</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icons/money.png')}}">
 {% endblock %}
 
 {% block body %}
+    {% include 'popups.html' %}
+
     <div class="container center">
         {% include 'header.html' %}
 
-        <div class="form-box add-box">
+        <div class="form-box shadow">
             <div class="form-box__header">
                 <h2>Add To Your Portoflio</h2>
 
@@ -27,21 +30,22 @@
 
                     <ol>
                         <li>
-                            Add the stocks ticker symbol in the ticker input box
+                            Add the stock's ticker symbol in the ticker input 
+                            box
                         </li>
 
                         <li>Then add the amount of shares you have bought</li>
 
                         <li>
-                            Finally. Click the "Add Shares" button to complete
-                            the process
+                            Finally. Click the "Add Shares" button to add the 
+                            shares
                         </li>
                     </ol>
                 </div>
             </div>
 
             <form action="{{ url_for('addPortfolioFunc') }}" method="POST">
-                <div class="add-box__inputs">
+                <div class="form-box__inputs">
                     <div>
                         <label for="ticker">Ticker</label>
                         <input type="text" name="ticker" id="ticker">
@@ -63,4 +67,6 @@
             </form>
         </div>
     </div>
+
+    <script src="{{ url_for('static', filename='js/popups.js')}}"></script>
 {% endblock %}

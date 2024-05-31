@@ -13,9 +13,11 @@
     --red: #CC6666;
     --purple: #85678F;
     --transparent: rgba(0, 0, 0, 0);
+    --less-transparent: rgba(0, 0, 0, 0.6);
 }
 
 body {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,7 +38,7 @@ body {
     align-items: end;
 }
 
-input, button {
+input, button, select {
     font-family: "Lora", serif;
 }
 

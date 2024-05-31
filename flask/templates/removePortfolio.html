@@ -1,17 +1,78 @@
 {% block head %}
-    <title>Financial Adviser</title>
+    {% include 'head.html' %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+    <title>Remove - Financial Adviser</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icons/atm.png')}}">
 {% endblock %}
 
-<p>This is remove</p>
+{% block body %}
+    {% include 'popups.html' %}
 
-<form action="{{ url_for('removePortfolioFunc') }}" method="POST">
-    <label for="ticker">Ticker</label>
-    <input type="text" name="ticker" id="ticker">
+    <div class="container center">
+        {% include "header.html" %}
 
-    <label for="amount">Amount</label>
-    <input type="number" name="amount" id="amount">
+        <div class="form-box shadow">
+            <div class="form-box__header">
+                <h2>Remove From Your Portfolio</h2>
 
-    <input type="submit" value="Submit">
-</form>
+                <img 
+                    src="{{ url_for('static', filename='placeholder/remove-portfolio.webp')}}" 
+                    alt=""
+                >
 
-{% include 'chat.html' %}
+                <p>
+                    Here you can remove shares of stocks from your portfolio 
+                    and stop tracking them.
+                </p>
+
+                <div class="form-box__header__steps">
+                    <h3>Steps:</h3>
+
+                    <ol>
+                        <li>
+                            Choose the stock's ticker symbol in the ticker 
+                            dropdown menu
+                        </li>
+
+                        <li>Then add the amount of shares you no longer own</li>
+
+                        <li>
+                            Finally. Click the "Remove Shares" button to 
+                            remove the shares
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <form action="{{ url_for('removePortfolioFunc') }}" method="POST">
+                <div class="form-box__inputs">
+                    <div>
+                        <label for="ticker">Ticker</label>
+                        <label class="select-ticker">
+                            <select name="ticker" id="ticker">
+                                {% for key in keys %}
+                                    <option value="{{ key }}">{{ key }}</option>
+                                {% endfor %}
+                            </select>
+                        </label>
+                
+                        <label for="amount">Amount</label>
+                        <input type="number" name="amount" id="amount">
+                    </div>
+
+                    <div>
+                        <!-- <input type="submit" value="Add Shares">
+                         -->
+                         <button>
+                            &#128221;
+                            <p>Remove Shares</p>
+                            <!-- <i class="fa-solid fa-paper-plane fa-lg"></i> -->
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/popups.js')}}"></script>
+{% endblock %}

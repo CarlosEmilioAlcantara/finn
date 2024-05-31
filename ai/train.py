@@ -9,8 +9,13 @@ from torch.utils.data import Dataset, DataLoader
 
 from model import NeuralNet
 
+# For our file paths
+import sys
+import os
+currentDir = os.path.dirname(__file__)
+
 # Loading the json file as an associative array
-with open(r'D:\agqxyz\Documents\School\ITEP203-1 AnalysisAndDesignOfAlgo\Python\final-out\intents.json', 'r') as f:
+with open(os.path.join(currentDir, r'..\intents.json')) as f:
     intents = json.load(f)
 
 # Where we'll store our data
@@ -120,7 +125,7 @@ data = {
     "tags": tags
 }
 
-FILE = r"D:\agqxyz\Documents\School\ITEP203-1 AnalysisAndDesignOfAlgo\Python\financial-adviser\ai\training-data\data.pth"
+FILE = os.path.join(currentDir, r'.\training-data\data.pth')
 torch.save(data, FILE)
 
 print(f'training complete. file saved to {FILE}')

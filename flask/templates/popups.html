@@ -1,0 +1,134 @@
+<div class="popup about shadow">
+    <h2>About</h2>
+
+    <p>
+        FINN is an AI-driven stock management assistant designed to simplify 
+        personal finance and empower informed investment decisions. Utilizing 
+        advanced AI and machine learning, FINN provides personal financial 
+        advice, and real-time market insights. 
+    </p>
+
+    <p>
+        It helps users navigate financial markets by offering guidance. FINN continuously adapts to market dynamics, delivering timely stock trends and news for proactive decision-making. Its robust features include portfolio tracking, performance analytics, and stock screening, all accessible through a user-friendly interface. 
+    </p>
+
+    <p>
+        Catering to both individual investors and financial advisors, FINN ensures data accuracy and security, supporting users in achieving 
+        financial wellness and success.
+    </p>
+
+    <div class="right">
+        <button class="popup-button about-read">
+            &#128278;
+            <p>Finish Reading</p>
+        </button>
+    </div>
+</div>
+
+<div class="popup instructions shadow">
+    <h2>Instructions</h2>
+
+    <div class="dropdown-container">
+        <div class="dropdown">
+            <div class="dropdown__header nav-header">
+                <p>Navigation</p>
+    
+                <span><></span>
+            </div>
+    
+            <div class="dropdown__content nav-content">
+                <img 
+                    src="{{ url_for('static', filename='dropdown/navigation.jpg') }}" 
+                    alt=""
+                >
+    
+                <p>
+                    To navigate between pages simply click one of the navigation bar
+                    buttons.
+                </p>
+            </div>
+        </div>
+    
+        <div class="dropdown">
+            <div class="dropdown__header popup-header">
+                <p>Popups</p>
+    
+                <span><></span>
+            </div>
+    
+            <div class="dropdown__content popup-content scrolling-dropdown">
+                <img 
+                    src="{{ url_for('static', filename='dropdown/popups.jpg') }}" 
+                    alt=""
+                >
+    
+                <p>
+                    Popups are present to provide additional information and help 
+                    to the user (&#128518; YOU'RE LOOKING AT ONE RIGHT NOW!!!)
+                </p>
+            </div>
+        </div>
+    
+        <div class="dropdown">
+            <div class="dropdown__header conv-header">
+                <p>Conversation / Chatting with the AI</p>
+    
+                <span><></span>
+            </div>
+    
+            <div class="dropdown__content conv-content">
+                <img 
+                    class="chatbox-img"
+                    src="{{ url_for('static', filename='dropdown/chatbox.jpg') }}" 
+                    alt=""
+                >
+    
+                <p>
+                    To talk with FINN simply type in the chatbox and click the
+                    "Submit" button to process the answer.
+                </p>
+    
+                <img 
+                    class="actions-img"
+                    src="{{ url_for('static', filename='dropdown/actions.jpg') }}" 
+                    alt=""
+                >
+    
+                <p>
+                    The results of a conversation can be deleted or regenerated
+                    if the user desires a different or updated answer.
+                </p>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown__header func-header">
+                <p>Functionalities</p>
+    
+                <span><></span>
+            </div>
+    
+            <div class="dropdown__content func-content scrolling-dropdown">
+                <img 
+                    class=""
+                    src="{{ url_for('static', filename='dropdown/functions.jpg') }}" 
+                    alt=""
+                >
+    
+                <p>
+                    To talk with FINN simply type in the chatbox and click the
+                    "Submit" button to process the answer.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="right">
+        <button class="popup-button instructions-read">
+            &#128278;
+            <p>Finish Reading</p>
+        </button>
+    </div>
+</div>
+<div class="overlay"></div>
