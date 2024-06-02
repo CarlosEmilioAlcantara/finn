@@ -757,6 +757,18 @@ method_mappings = {
 
 keys = method_mappings.keys()
 
+nonFuncTags = ["greeting", "goodbye", "resource", "budgeting", "savings",
+               "emergency-fund", "investment-types", "credit-score",
+               "improve-credit-score", "compound-interest", "rent-vs-buy",
+               "retirement-planning", "debt-repayment", "401k", "identity-theft", "checking-vs-savings", "mutual-fund",
+               "mortgage", "net-worth", "student-loans", "balance-transfer",
+               "traditional-IRA", "home-equity", "will", "401k-vs-IRA",
+               "real-estate", "savings-account", "dollar-cost", "homebuying",
+               "traditional-401k", "hsa", "retirement-income",
+               "filipino-investment", "bank-account", "personal-loan",
+               "credit-card", "stock-market", "investment-taxes",
+               "retirement"]
+
 @app.route('/chat', methods=['POST', 'GET'])
 def chat():
     if request.method == "POST":
@@ -779,7 +791,7 @@ def chat():
         if prob.item() > 0.75:
             for intent in intents["intents"]:
                 if tag == intent["tag"]:
-                    if tag == "greeting" or tag == "goodbye" or tag == "advice":
+                    if tag in nonFuncTags:
                         answer = (f"{bot_name}: {random.choice(intent['responses'])}")
 
                         # Adding to our database and displaying
@@ -790,12 +802,11 @@ def chat():
                             db.session.add(new_conversation)
                             db.session.commit()
 
-                            conversations = Conversation.query.order_by(Conversation.date_created.desc().desc()).all()
+                            conversations = Conversation.query.order_by(Conversation.date_created.desc()).all()
                             
                             return render_template('chat.html', conversations=conversations)
                         except:
                             return 'Something went wrong'    
-
                     else:
                         id = -1
 
@@ -871,7 +882,7 @@ def regenerate(id):
     if prob.item() > 0.75:
         for intent in intents["intents"]:
             if tag == intent["tag"]:
-                if tag == "greeting" or tag == "goodbye" or tag == "advice":
+                if tag in nonFuncTags:
                     answer = (f"{bot_name}: {random.choice(intent['responses'] )}")
                     
                     try:
