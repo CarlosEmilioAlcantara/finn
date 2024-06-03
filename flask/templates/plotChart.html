@@ -59,7 +59,12 @@
                         </label>
                     
                         <label for="amount">Start Date</label>
-                        <input type="date" name="start-date" id="start-date">
+                        <input 
+                            type="date" 
+                            name="start-date" 
+                            id="start-date"
+                            max="{{ dateNow }}"
+                        >
                     </div>
 
                     <div>

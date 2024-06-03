@@ -3,6 +3,12 @@ from flask import Flask, render_template, session, url_for, request, redirect, f
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
+def getDateNow():
+    unformattedDate = datetime.now()
+    formattedDate = unformattedDate.strftime("%Y-%m-%d")
+
+    return formattedDate
+
 # AI THINGS
 import sys
 import os
@@ -486,11 +492,13 @@ def gainsPortfolio(id, sentence, intent):
     
     conversations = Conversation.query.order_by(Conversation.date_created.desc()).all()
     keys = portfolio.keys()
+    dateNow = getDateNow()
 
     if id < 0:
         return render_template(
             'gainsPortfolio.html', 
             keys =  keys,
+            dateNow = dateNow,
             conversations=conversations
         )
     else:
@@ -619,11 +627,13 @@ def plotChart(id, sentence, intent):
     
     conversations = Conversation.query.order_by(Conversation.date_created.desc()).all()
     keys = portfolio.keys()
+    dateNow = getDateNow()
 
     if id < 0:
         return render_template(
             'plotChart.html', 
             keys = keys,
+            dateNow = dateNow,
             conversations=conversations
         )
     else:
